@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap");
+
+.bannerPagina {
+  object-fit: cover;
+  height: 500px;
+}
+
+.colorDeFondo {
+  background-color: #000000;
+}
+.colorPlanPremium {
+  background-color: #7828ff;
+}
+.colorPlanNormal {
+  background-color: #0084ff;
+}
+.liStyle {
+  list-style: none;
+}
+.colorBotones {
+  background-color: #7828ff;
+}
+.imagenSarurada {
+  filter: none;
+}
+.imagenSaturada:hover {
+  filter: saturate(200%);
+  -ms-zoom-animation: default;
+}
+.letraform {
+  font-family: "Catamaran", sans-serif;
+}
+.creditcard {
+  width: 100px;
+  height: 100px;
+}
+.bannerVikingos {
+  height: 700px;
+  object-fit: cover;
+}
+.logox {
+  width: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tamanoRecomendaciones {
+  width: 75%;
+}
+
+.espacioSlider {
+  max-width: 1000px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+input[type="radio"] {
+  display: none;
+}
+.espacio {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  max-height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card1 {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.imgSlider {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-2:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-3,
+#item-3:checked ~ .cards #selector-2 {
+  transform: translateX(-40%) scale(0.8);
+  z-index: 0;
+  opacity: 0.2;
+}
+#item-3:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-2,
+#item-2:checked ~ .cards #selector-3 {
+  transform: translateX(40%) scale(0.8);
+  z-index: 0;
+  opacity: 0.2;
+}
+#item-1:checked ~ .cards #selector-1,
+#item-2:checked ~ .cards #selector-2,
+#item-3:checked ~ .cards #selector-3 {
+  transform: translateX(0%) scale(1);
+  z-index: 1;
+}
+
+.centrarCat {
+  position: absolute;
+  top: 46.5%;
+  left: 37%;
+  text-decoration: none;
+  color: white;
+}
+
+.textoJustificadoModal {
+  text-align: justify;
+}
+
+.tutox {
+  align-items: center;
+}
+
+.sizePelisSugeridas {
+  width: 24.5%;
+}
+
+/* Dispositivos sm */
+@media all and (max-width: 767px) {
+  .iconos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mcard {
+    margin-left: 60px;
+    margin-bottom: 10px;
+  }
+  .bannerVikingos {
+    height: 300px;
+    object-fit: cover;
+  }
+  .lineHeight1 {
+    line-height: 1rem;
+  }
+  .tamaño {
+    width: 100%;
+  }
+  .tamañoRecomendaciones {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .centrarCat {
+    position: absolute;
+    top: 46.5%;
+    left: 25%;
+    text-decoration: none;
+    color: white;
+  }
+
+ 
+}
+@media all and (min-width: 480px) and (max-width: 765) {
+  .centrarCat {
+    position: absolute;
+    top: 46.5%;
+    left: 10%;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.aboutus {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: aliceblue;
+  background-color: #7828ff;
+  background-image: linear-gradient(
+    45deg,
+    #13151d 0%,
+    #0084ff 52%,
+    #7828ff 90%
+  );
+  font-family: "Anton", sans-serif;
+}
+.aNonstyle {
+  text-decoration: none;
+  color: grey;
+}
+
+.lineHeight {
+  line-height: 2rem;
+}
+
+.lineHeight1 {
+  line-height: 3rem;
+}
+.aboutUsJustify {
+  text-align: justify;
+}
+
+.tamaño {
+  width: 33%;
+}
+
+

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" Plataforma de stream MovieCode" />
+    <meta
+      name="keywords"
+      content="disney plus, peliculas, series, terror, accion, comedia"
+    />
+    <meta
+      name="author"
+      content="Gonzalo Gallardo"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="icon" href="../img/moviecode (3).png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>MovieCode</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <img width="50px" src="../img/moviecode (3).png" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-3">
+              <li class="nav-item">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#Modal"
+                >
+                  Iniciar sesión
+                </button>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./planes.html"
+                  >Unirse a MovieCode</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-lg-auto me-auto me-lg-0 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/sobreNosotros.html"
+                  >Sobre nosotros</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Categorias</a
+                >
+                <ul class="dropdown-menu bg-dark text-white">
+                  <li>
+                    <a
+                      class="dropdown-item text-white"
+                      href="../pages/AccionScifi.html"
+                      >Accion / Sci-fi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white"
+                      href="./ComediasDramas.html"
+                      >Comedias y Dramas</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white active"
+                      href="./TerrorSuspenso.html"
+                      >Terror y Suspenso</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Buscá tu peli o serie"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-light" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="colorDeFondo text-white">
+      <div
+        class="modal fade"
+        id="Modal"
+        tabindex="-1"
+        aria-labelledby="ModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark text-secondary">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalLabel">Iniciar sesión</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="InputEmail1" class="form-label"
+                    >Escribe tu correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control bg-secondary"
+                    id="InputEmail1"
+                    aria-describedby="emailHelp"
+                    required
+                    maxlength="100"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="InputPassword1" class="form-label"
+                    >Introduce tu contaseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control bg-secondary"
+                    id="InputPassword1"
+                    required
+                    maxlength="50"
+                    minlength="8"
+                    required
+                  />
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="Check1" />
+                  <label class="form-check-label" for="Check1"
+                    >Recordarme</label
+                  >
+                </div>
+                <a href="#">
+                  <button type="submit" class="btn btn-primary">Entrar</button>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="pt-5">
+        <div id="sliderPagina" class="carousel slide pt-4" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#sliderPagina"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#sliderPagina"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#sliderPagina"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../img/TERROR/banner 3.jpg"
+                class="d-block w-100 bannerPagina"
+                alt="Banner 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../img/TERROR/banner definitivo 2x.png"
+                class="d-block w-100 bannerPagina"
+                alt="Banner 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../img/TERROR/banner 1 definitivo.png"
+                class="d-block w-100 bannerPagina"
+                alt="Banner 3"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#sliderPagina"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#sliderPagina"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="pt-3 container">
+        <div class="container">
+          <h1 class="display-5 text-center text-primary">
+            <strong>Terror y Suspenso</strong>
+          </h1>
+          <hr />
+        </div>
+        <article
+          class="row justify-content-center my-5"
+          data-masonry='{"percentPosition": true }'
+        >
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalBatman">
+              <img
+                src="../img/TERROR/1.jpg"
+                alt="transportador"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/2.jpg"
+                alt="camino"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/3.jpg"
+                alt="Drive"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/4.jpg"
+                alt="Rapido y furioso"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/16.jpg"
+                alt="La conquista del honor"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/5.jpg"
+                alt="Salvando al soldado Ryan"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/6.jpg"
+                alt="Iluminados por el fuego"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/7.jpg"
+                alt="Titanes del pacifico"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/8.jpg"
+                alt="Iroman"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/9.jpg"
+                alt="The debt collector"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/10.jpg"
+                alt="Underground 6"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-3 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/11.jpg"
+                alt="Noche de venganza"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-4 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/12.jpg"
+                alt="Firts kill"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-4 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/13.jpg"
+                alt="Red de corrupcion"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-4 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/14.jpg"
+                alt="Skjelvet"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+          <aside class="col-6 col-md-4 col-lg-3 my-1">
+            <a href="../pages/error.html">
+              <img
+                src="../img/TERROR/15.jpg"
+                alt="Ganar o morir"
+                class="rounded-4 w-100"
+              />
+            </a>
+          </aside>
+        </article>
+      </section>
+      <div class="py-4">
+        <nav aria-label="Page navigation terror">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link bg-dark text-white" href="#">Previous</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link bg-dark active text-white" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link bg-dark text-white" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link bg-dark text-white" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link bg-dark text-white" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        tabindex="-1"
+        aria-labelledby="modalBatman"
+        aria-hidden="true"
+        class="modal fade"
+        id="modalBatman"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content text-black">
+            <div class="modal-header d-block">
+              <h5 class="modal-title text-center">The ruins</h5>
+            </div>
+            <div class="modal-body text-center">
+              <img src="../img/TERROR/1.jpg" alt="batman modal" class="w-75" />
+            </div>
+            <div class="modal-footer">
+              <p class="textoJustificadoModal">
+                Cuando un grupo de amigos universitarios van a visitar unas
+                ruinas mayas, caen en una milenaria trampa. Una desconocida
+                fuerza diabólica arrastra a sus víctimas a una interminable
+                pesadilla de terror.
+              </p>
+            </div>
+            <p class="text-center"><b>Calidad:</b> 2k</p>
+            <p class="text-center"><b>Edad sugerida:</b> +16</p>
+            <p class="text-center"><b>Duracion:</b> 220 minutos</p>
+            <p class="text-center"><b>Año de Publicacion:</b> 2021</p>
+            <hr />
+            <div class="text-center">
+              <div>
+                <p class="text-center"><b>También te podría interesar</b></p>
+                <hr />
+              </div>
+              <div class="row mx-4 text-center justify-content-center">
+                <a class="col-sm-6 col-md-4 col-lg-3" href="error.html"
+                  ><img
+                    src="../img/slider batman/1.jpg"
+                    alt="primero"
+                    class="my-1 w-100"
+                /></a>
+                <a class="col-sm-6 col-md-4 col-lg-3" href="error.html"
+                  ><img
+                    src="../img/slider batman/2.webp"
+                    alt="segundo"
+                    class="my-1 w-100"
+                /></a>
+                <a class="col-sm-6 col-md-4 col-lg-3" href="error.html"
+                  ><img
+                    src="../img/slider batman/3.jpg"
+                    alt="tercero"
+                    class="my-1 w-100"
+                /></a>
+                <a class="col-sm-6 col-md-4 col-lg-3" href="error.html"
+                  ><img
+                    src="../img/slider batman/4.jpg"
+                    alt="cuarto"
+                    class="my-1 w-100"
+                /></a>
+                <a class="col-sm-6 col-md-4 col-lg-3" href="error.html"
+                  ><img
+                    src="../img/slider batman/5.webp"
+                    alt="quinto"
+                    class="smy-1 w-100"
+                /></a>
+                <a class="col-sm-6 col-md-4 col-lg-3" href="error.html"
+                  ><img
+                    src="../img/slider batman/6.webp"
+                    alt="sexto"
+                    class="my-1 w-100"
+                /></a>
+                <a class="col-sm-6 col-md-4 col-lg-3" href="error.html"
+                  ><img
+                    src="../img/slider batman/7.webp"
+                    alt="septimo"
+                    class="smy-1 w-100"
+                /></a>
+                <a class="col-sm-6 col-md-4 col-lg-3" href="error.html"
+                  ><img
+                    src="../img/slider batman/8.webp"
+                    alt="octavo"
+                    class="my-1 w-100"
+                /></a>
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondar my-1"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark pb-2">
+      <div class="container">
+        <div class="row mx-2 justify-content-between lineHeight">
+          <div class="col-12 col-md-3">
+            <ul
+              class="text-secondary listnone centrado text-center aNonstyle lineHeight1"
+            >
+              <li>
+                <a href="../pages/error.html" class="text aNonstyle">FAQS</a>
+              </li>
+              <li>
+                <a href="../pages/contacto.html" class="text aNonstyle"
+                  >Consultas</a
+                >
+              </li>
+              <li>
+                <a href="../pages/error.html" class="text aNonstyle"
+                  >Terminos de uso</a
+                >
+              </li>
+              <li>
+                <a href="../pages/sobreNosotros.html" class="text aNonstyle"
+                  >Acerca de Nosotros</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3">
+            <h5 class="text-secondary text-center">Legales</h5>
+            <ul
+              class="text-secondary listnone centrado text-center aNonstyle lineHeight"
+            >
+              <li>
+                <a href="../pages/error.html" class="text aNonstyle"
+                  >Portal de empleo</a
+                >
+              </li>
+              <li>
+                <a href="../pages/error.html" class="text aNonstyle"
+                  >Politica de privacidad</a
+                >
+              </li>
+              <li>
+                <a href="../pages/error.html" class="text aNonstyle"
+                  >Preferencias de cookies</a
+                >
+              </li>
+              <li>
+                <a href="../pages/error.html" class="text aNonstyle">GPRD</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 text-center">
+            <h5 class="text-secondary iconos">Unite</h5>
+            <div class="iconos">
+              <a href="#"><i class="bi bi-facebook text-secondary fs-4"></i></a>
+              <a href="#"
+                ><i class="bi bi-twitter text-secondary fs-4 mx-2"></i
+              ></a>
+              <a href="#"
+                ><i class="bi bi-instagram text-secondary fs-4"></i
+              ></a>
+            </div>
+            <div class="my-3">
+              <a class="iconos" href="/pages/error.html"
+                ><img
+                  src="../img/google-play-badge-bb.svg"
+                  alt="google-play-badge-bb"
+                  width="50%"
+              /></a>
+            </div>
+            <div>
+              <a class="iconos" href="/pages/error.html"
+                ><img
+                  src="../img/badge-apple-store.svg"
+                  alt="badge-apple-store"
+                  width="50%"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-light text-center pt-3 style-6 style-6:hover">
+          &copy; Todos los derechos reservados
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/c45e0b44a7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
